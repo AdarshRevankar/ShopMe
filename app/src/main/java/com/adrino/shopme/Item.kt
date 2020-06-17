@@ -1,6 +1,6 @@
 package com.adrino.shopme
 
-public class Mobile(id: Int, name: String, price: Int) {
+class Mobile(id: Int, name: String, price: Int) {
     private val price: Int = id
     private val name: String = name
     private val id: Int = price

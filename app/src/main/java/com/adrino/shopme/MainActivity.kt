@@ -14,6 +14,14 @@ class MainActivity : AppCompatActivity() {
         val searchView = findViewById<SearchView>(R.id.search)
         searchView.setOnQueryTextListener(queryListener)
 
+        val sqlHandler = SQLHandler(
+            resources.getString(R.string.db_user),
+            resources.getString(R.string.db_password),
+            resources.getString(R.string.db_database),
+            resources.getString(R.string.db_server)
+        )
+
+        sqlHandler.execute("SELECT name FROM characters")
     }
 
     /**

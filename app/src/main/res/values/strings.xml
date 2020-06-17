@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ShopMe</string>
+
+    <!--Database Parameters-->
+    <string name="db_user">b0c2244faae78b</string>
+    <string name="db_password">6f59158e</string>
+    <string name="db_database">heroku_a88504e8d77c8c5</string>
+    <string name="db_server">us-cdbr-iron-east-05.cleardb.net</string>
 </resources>
