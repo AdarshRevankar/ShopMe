@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">ShopMe</string>
 
+    <!--UI Parameters-->
+    <integer name="ui_rv_col_count">3</integer>
+
     <!--Database Parameters-->
     <string name="db_user">b0c2244faae78b</string>
     <string name="db_password">6f59158e</string>
