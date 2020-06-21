@@ -2,6 +2,7 @@ package com.adrino.shopme
 
 import android.os.StrictMode
 import android.util.Log
+import com.mysql.jdbc.CommunicationsException
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.SQLException
@@ -22,9 +23,13 @@ class SQLHandler(
     fun executeQuery(query: String): MutableList<Mobile>? {
         val mobilesList = mutableListOf<Mobile>()
         val statement = connection?.createStatement()
-        val res = statement?.executeQuery(query)
-        while (res != null && res.next())
-            mobilesList.add(Mobile(1, res.getString("name"), 2000))
+        try {
+            val res = statement?.executeQuery(query)
+            while (res != null && res.next())
+                mobilesList.add(Mobile(1, res.getString("name"), 2000, res.getString("img_url")))
+        } catch (e: CommunicationsException) {
+            Log.e("Execution Query Error", "executeQuery: " + e.message)
+        }
         return mobilesList
     }
 

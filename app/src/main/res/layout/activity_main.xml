@@ -6,24 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.mancj.materialsearchbar.MaterialSearchBar
-        android:id="@+id/searchBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin = "20dp"
-        style="@style/MaterialSearchBarLight"
-        tools:ignore="MissingConstraints"
-        app:mt_speechMode="true"
-        app:mt_roundedSearchBarEnabled="true"
-        app:mt_hint="Search Here"
-        app:mt_maxSuggestionsCount="10"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_below="@id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar"
+        style="@style/MaterialSearchBarLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:mt_hint="Search Here"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_speechMode="true"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Characters"
+        android:textSize="40sp"
+        android:paddingLeft="30dp"
+        android:gravity="center|left"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

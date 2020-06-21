@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:layout_height="150dp"
     android:padding="10dp"
     android:layout_margin="5dp"
-    android:background="#AAAAAA">
+    android:background="@drawable/myrect">
+
+    <ImageView
+        android:id="@+id/charImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center" />
 
     <TextView
-        android:id="@+id/tvAnimalName"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:textColor="#FFFFFF"
+        android:padding="3dp"
+        android:layout_alignLeft="@id/charImage"
+        android:layout_alignTop="@id/charImage"
+        android:layout_alignRight="@id/charImage"
+        android:layout_alignBottom="@id/charImage"
         android:textSize="20sp"/>
 
-</LinearLayout>
+</RelativeLayout>
